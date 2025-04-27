@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+@import './custom/switch-mode.css';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Shadow */
+    --box-shadow-blue: 8px 8px 0 rgba(0, 224, 255, 1);
+    --box-shadow-red: 8px 8px 0 rgba(255, 0, 122, 1);
+    /* Shadow Hover */
+    --box-shadow-blue-hover: 12px 12px 0 rgba(0, 224, 255, 1);
+    --box-shadow-red-hover: 12px 12px 0 rgba(255, 0, 122, 1);
+    /* Border */
+    --border-blue: 2px solid rgba(0, 224, 255, 1);
+    --border-red: 2px solid rgba(255, 0, 122, 1);
+
+    /* Color */
+    --color-blue: rgba(0, 224, 255, 1);
+    --color-red: rgba(255, 0, 122, 1);
+}
+
+/* Menu */
+.nav-menu {
+    box-shadow: 0px 12px 0 #00E0FF;
+    padding: 16px;
+}
+.nav-link {
+    padding: 12px 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+    border-color: #FF007A;
+    background: #00E0FF;
+    color: #111;
+    box-shadow: 4px 4px 0 #FF007A;
+    transform: translate(-2px, -2px);
+    font-weight: bolder;
+}
+
+/* Brutal Transition */
+.brutal-transition { 
+    transition: transform 0.2s ease-in-out;
+}
+.brutal-transition:hover {
+    transform: translate(-4px, -4px);
+}

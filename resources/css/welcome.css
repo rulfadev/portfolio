@@ -1,0 +1,209 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+--drop-shadow-dark: -0.25em 0.25em 0 rgba(255, 255, 255, 1);
+--drop-shadow-light: -0.25em 0.25em 0 rgba(0, 0, 0, 1);
+--padding-portolio: 0.9em 1.8em;
+}
+
+@keyframes fallone {
+        0% {
+                transform: translateY(-400px) rotate(0deg);
+                opacity: 0;
+        }
+
+        100% {
+                transform: translateY(0) rotate(15deg);
+                opacity: 1;
+        }
+}
+
+.falling-p,
+.falling-o,
+.falling-r,
+.falling-t,
+.falling-o2,
+.falling-f,
+.falling-o3,
+.falling-l,
+.falling-i,
+.falling-o4 {
+        animation: fallone 1s ease-in forwards;
+        opacity: 0;
+        position: absolute;
+        transform-origin: bottom right;
+}
+
+.falling-p { right: 200px; bottom: 50px; }
+.falling-o { right: 150px; bottom: 50px; }
+.falling-r { right: 110px; bottom: 50px; }
+.falling-t { right: 75px; bottom: 50px; }
+.falling-o2 { right: 25px; bottom: 50px; }
+.falling-f { right: 160px; bottom: 0; }
+.falling-o3 { right: 110px; bottom: 0; }
+.falling-l { right: 80px; bottom: 0; }
+.falling-i { right: 60px; bottom: 0; }
+.falling-o4 { right: 10px; bottom: 0; }
+
+.falling-textone:nth-child(2),
+.falling-textone:nth-child(6) {
+        animation-delay: 0.2s;
+        transform: rotate(10deg) translateY(-10px);
+}
+
+.falling-textone:nth-child(3),
+.falling-textone:nth-child(7) {
+        animation-delay: 0.4s;
+        transform: rotate(5deg) translateY(-20px);
+}
+
+.falling-textone:nth-child(4),
+.falling-textone:nth-child(8) {
+        animation-delay: 0.6s;
+        transform: rotate(0deg) translateY(-30px);
+}
+
+.falling-textone:nth-child(5),
+.falling-textone:nth-child(9) {
+        animation-delay: 0.8s;
+        transform: rotate(0deg) translateY(-40px);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+        .falling-p { right: 100px; bottom: 25px; }
+        .falling-o { right: 75px; bottom: 25px; }
+        .falling-r { right: 55px; bottom: 25px; }
+        .falling-t { right: 37.5px; bottom: 25px; }
+        .falling-o2 { right: 12.5px; bottom: 25px; }
+        .falling-f { right: 80px; bottom: 0; }
+        .falling-o3 { right: 55px; bottom: 0; }
+        .falling-l { right: 40px; bottom: 0; }
+        .falling-i { right: 30px; bottom: 0; }
+        .falling-o4 { right: 5px; bottom: 0; }
+}
+
+/* Cards */
+.cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+}
+
+.cards .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 400ms;
+}
+
+.cards .card p.tip {
+        font-size: 1.2em;
+        font-weight: 700;
+}
+
+.cards .card p.second-text {
+        font-size: .8em;
+}
+
+.cards .card:hover {
+        transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+        filter: blur(10px);
+        transform: scale(0.9, 0.9);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+        .cards {
+                flex-direction: row;
+                flex-wrap: wrap;
+        }
+
+        .cards .card {
+                flex: 1 1 100%;
+                margin: 0.5em 0;
+        }
+
+        .cards .card p.tip {
+                font-size: 1em;
+        }
+
+        .cards .card p.second-text {
+                font-size: 0.7em;
+        }
+}
+
+/* Button Jelajahi */
+button.jelajahi {
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  border-radius: 0.3em;
+  font-size: 12px;
+  cursor: pointer;
+  filter:drop-shadow(4px 4px 0px var(--drop-shadow-dark));
+}
+
+button.jelajahi span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  box-shadow: 0 0.4em 0.1em 0.019em;
+  filter: none;
+}
+
+button.jelajahi span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0;
+  border: none;
+}
+
+button.jelajahi span:not(hover) {
+  transition: all 1s;
+}
+
+button.jelajahi svg {
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button.jelajahi span p {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button.jelajahi:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button.jelajahi:hover span p {
+  transform: translateX(5px);
+}
+
+/* Title & Box Portofolio */
+.title {
+        padding: 0.9em 1.8em;
+}
+
+@media (max-width: 600px) {
+  .title {
+    width: auto;
+    padding: 0.5em 1em;
+  }
+}
