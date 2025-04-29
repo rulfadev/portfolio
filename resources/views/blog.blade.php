@@ -3,29 +3,133 @@
 @section('content')
     <div class="content max-w-10xl bg-white dark:bg-[#0A192F] pt-50">
         <!-- Start About Section -->
-        <section id="about" class="container mx-auto mb-30 animate-fade-in-up justify-center items-center flex flex-col">
-            <h1
-                class="inline-block p-4 text-4xl md:text-6xl font-bold mb-4 dark:bg-transparent dark:text-white bg-white text-black brutal-transition shadow-(--box-shadow-blue) dark:shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) dark:hover:shadow-(--box-shadow-red-hover)">
-                Hi, I'm
-                Syahrul Falah
-            </h1>
-            <p class="text-xl mb-8 mx-4 dark:text-white text-black">Coding with purpose, building with passion.</p>
+        <section id="about" class="container mx-auto animate-fade-in-up justify-center items-start flex flex-col gap-5">
+            <p
+                class="inline-block p-4 text-small font-bold dark:bg-transparent dark:text-white bg-white text-black brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2">
+                <span class="mr-1 inline-block h-2 w-2 animate-pulse rounded-full bg-rose-500 justify-center"></span>
+                Available for hire
+            </p>
+            <h1 class="text-4xl font-bold dark:text-white text-black mt-5">Syahrul Falah</h1>
+            <p class="text-xl dark:text-gray-300 text-gray-700">Coding with purpose, building with passion.</p>
+            <div class="flex flex-wrap gap-2">
+                <div
+                    class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 dark:text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]">
+                    React</div>
+                <div
+                    class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 dark:text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]">
+                    Next.js</div>
+                <div
+                    class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 dark:text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]">
+                    TypeScript</div>
+                <div
+                    class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 dark:text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]">
+                    Node.js</div>
+                <div
+                    class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 dark:text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]">
+                    UI/UX Design</div>
+                <div
+                    class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 dark:text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]">
+                    Tailwind CSS</div>
+            </div>
+            <p class="dark:text-gray-300 text-gray-700 w-1/3">I am a passionate developer with expertise in building
+                modern web
+                applications. I love creating new
+                things or improving
+                existing ones. And can work both in a team and individually.</p>
+            <a href="{{ url('/card') }}"
+                class="mt-6 text-1xl inline-block bg-yellow-500 text-black text-xl px-6 py-3 duration-200 ease-in-out hover:-translate-1 hover:scale-105 btn hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover)">Contact
+                me</a>
         </section>
         <!-- End About Section -->
+
+        <!-- Start Project Github -->
+        <section id="projects" class="py-8 md:py-12 lg:py-16 animate-fadeIn">
+            <div class="container-fluid px-4 md:px-8 mx-auto">
+                @if ($repositories && is_array($repositories))
+                    <div class="space-y-1 mb-6">
+                        <h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-white">Projects</h2>
+                        <p class="text-gray-400">Check out my latest projects directly from GitHub</p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            @foreach ($repositories as $repo)
+                                <div class="bg-black rounded-lg p-6 flex flex-col">
+                                    <div class="mb-4">
+                                        <h3 class="text-xl font-semibold text-white flex items-center gap-2 mb-2"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" class="lucide lucide-github h-5 w-5">
+                                                <path
+                                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                                </path>
+                                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                            </svg>{{ $repo['name'] }}</h3>
+                                        <p class="text-gray-400 text-sm">{{ $repo['description'] ?? 'Tidak ada deskripsi.' }}</p>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        @foreach ($repo['topics'] as $topic)
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]">{{ $topic }}</span>
+                                        @endforeach
+                                    </div>
+                                    <div class="flex flex-col justify-between mt-auto text-gray-400">
+                                        <div class="flex items-start">
+                                            <div class="flex items-center mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-star h-4 w-4 mr-1">
+                                                    <path
+                                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                                    </path>
+                                                </svg>{{ $repo['stargazers_count'] }}</div>
+                                            <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-git-fork h-4 w-4 mr-1">
+                                                    <circle cx="12" cy="18" r="3"></circle>
+                                                    <circle cx="6" cy="6" r="3"></circle>
+                                                    <circle cx="18" cy="6" r="3"></circle>
+                                                    <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"></path>
+                                                    <path d="M12 12v3"></path>
+                                                </svg>{{ $repo['forks_count'] }}</div>
+                                        </div>
+                                        <div class="flex flex-row justify-between items-center border-t border-gray-800 pt-4 mt-4">
+                                            <a target="_blank" rel="noreferrer"
+                                                class="inline-flex items-center px-2.5 py-2 text-xs font-semibold duration-200 ease-in-out hover:-translate-1 hover:scale-105 border-2 text-black hover:text-white hover:border-transparent hover:bg-slate-800 text-white hover:dark:bg-white dark:hover:text-black shadow-[2px_2px_0_var(--color-blue)] hover:shadow-[4px_4px_0_var(--color-red)]"
+                                                href="{{ $repo['html_url'] }}"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-github h-4 w-4 mr-2">
+                                                    <path
+                                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                                    </path>
+                                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                                </svg>View on github</a>
+                                            <span class="text-gray-400 text-sm">{{ $repo['language'] }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
+            </div>
+        </section>
+        <!-- End Project Github -->
 
         <!-- Start Project Section -->
         <section id="project" class="container sm:flex flex-col lg:flex-row space-y-5 lg:space-y-0 gap-20 mx-auto">
             <!-- Sidebar Kiri -->
             <div class="hidden lg:w-4/12 w-full sm:block">
-                @if ($popularArticles)
+                @if (!$popularArticles->isEmpty())
                     <div class="sticky top-30 flex flex-col">
                         <h1
-                            class="text-2xl font-bold p-4 w-3/5 mx-auto mb-5 text-center dark:bg-transparent dark:text-white bg-white text-black brutal-transition shadow-(--box-shadow-blue) dark:shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) dark:hover:shadow-(--box-shadow-red-hover) border-2">
+                            class="text-2xl font-bold p-4 w-3/5 mx-auto mb-5 text-center dark:bg-transparent dark:text-white bg-white text-black brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2">
                             🚀 Popular
                             Project
                         </h1>
                         @foreach($popularArticles as $popularArticle)
-                            <div class="flex w-full h-25 max-w-full mx-auto overflow-hidden cursor-pointer my-3 dark:bg-transparent bg-white brutal-transition shadow-(--box-shadow-blue) dark:shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) dark:hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
+                            <div class="flex w-full h-25 max-w-full mx-auto overflow-hidden cursor-pointer my-3 dark:bg-transparent bg-white brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
                                 onclick="window.location='{{ url('/articles/' . $popularArticle->slug) }}'">
                                 <div class="text-sm p-5 flex flex-col justify-center w-full">
                                     <a href="{{ url('/articles/' . $popularArticle->slug) }}"
@@ -49,7 +153,7 @@
 
                 <!-- Artikel Pilihan -->
                 @if($latestArticle)
-                    <div class="col-span-2 w-full max-w-full mx-auto cursor-pointer brutal-transition shadow-(--box-shadow-blue) dark:shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) dark:hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
+                    <div class="col-span-2 w-full max-w-full mx-auto cursor-pointer brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
                         onclick="window.location='{{ url('/articles/' . $latestArticle->slug) }}'">
                         <img class="h-90 w-full object-cover md:h-90 md:w-full mask-b-from-80%"
                             src="{{ url('/storage/' . $latestArticle->image) }}" alt="{{ $latestArticle->title }}">
@@ -74,7 +178,7 @@
 
                 <!-- Artikel Lainnya -->
                 @foreach($articlesProject as $article)
-                    <div class="md:flex w-full col-span-2 md:col-span-1 md:h-30 max-w-full overflow-hidden cursor-pointer brutal-transition shadow-(--box-shadow-blue) dark:shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) dark:hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
+                    <div class="md:flex w-full col-span-2 md:col-span-1 md:h-30 max-w-full overflow-hidden cursor-pointer brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
                         onclick="window.location='{{ url('/articles/' . $article->slug) }}'">
                         <div class="md:shrink-0">
                             <img class="h-90 w-full md:h-full md:w-30 object-cover mask-r-from-80%"

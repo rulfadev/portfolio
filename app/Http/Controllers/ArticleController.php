@@ -4,15 +4,35 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class ArticleController extends Controller
 {
     public function index()
     {
-        // $latestArticle = Article::latest()->first(); // Artikel terbaru sebagai pilihan utama
+        $username = 'rulfadev'; // Ganti dengan username kamu
+        // $token = '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';
+
+        // $response = Http::withToken($token)
+        //     ->get("https://api.github.com/users/{$username}/repos?per_page=6&sort=updated&direction=desc");
+        // $response = Http::get("https://api.github.com/users/rulfadev/repos?per_page=6&sort=updated&direction=desc");
+
+        // if (!$response->successful()) {
+        //     $repositories = collect([]);
+        // } else {
+        //     if ($response->status() === 403 || $response->status() === 404) {
+        //         $repositories = collect([]);
+        //     }
+        //     $repositories = $response->json();
+        // }
+
+
+        $response = json_decode(file_get_contents(resource_path('data/dummygit.json')), true); // dumy data
+        $repositories = $response;
+
         $latestArticle = Article::whereHas('category', function ($query) {
             $query->where('name', 'project');
-        })->latest()->first(); // Artikel terbaru dengan kategori 'project'
+        })->latest()->first();
         $articles = Article::where('id', '!=', optional($latestArticle)->id)
             ->whereDoesntHave('category', function ($query) {
                 $query->where('name', 'project');
@@ -30,18 +50,19 @@ class ArticleController extends Controller
                 $query->where('name', 'project');
             })
             ->take(5)
-            ->get(); // Artikel populer berdasarkan jumlah tampilan dalam 7 hari terakhir
+            ->get();
 
-        if ($latestArticle === null) {
+        if ($latestArticle === null || $articles->isEmpty() || $articlesProject->isEmpty() || $popularArticles->isEmpty()) {
             return view('blog', [
                 'latestArticle' => null,
-                'articles' => collect([]), // Use an empty collection instead of an array
-                'popularArticles' => collect([]), // Use an empty collection instead of an array
-                'articlesProject' => collect([]), // Use an empty collection instead of an array
+                'articles' => collect([]),
+                'popularArticles' => collect([]),
+                'articlesProject' => collect([]),
+                'repositories' => $repositories,
             ])->with('error', 'No articles available at the moment. Please check back later.');
         }
 
-        return view('blog', compact('latestArticle', 'articles', 'popularArticles', 'articlesProject'));
+        return view('blog', compact('latestArticle', 'articles', 'popularArticles', 'articlesProject', 'repositories'));
     }
 
     public function show(Request $request, $slug)

@@ -128,7 +128,7 @@
         </div>
         <div class="flex sm:justify-start justify-center space-x-4">
             <button class="jelajahi dark:bg-blue-600 bg-blue-400 items-center flex border-1 dark:border-white"
-                onclick="window.location.href='{{ route('blog') }}'">
+                onclick="window.location.href='{{ route('landing') }}'">
                 <span
                     class="dark:bg-blue-600 bg-blue-400 dark:text-white font-bold flex items-center border-1 dark:border-white">
                     <p class="mr-2">Jelajahi</p>
