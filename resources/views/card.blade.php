@@ -23,7 +23,7 @@
             <h2 class="text-gray-500 dark:text-white text-lg">
                 <ul class="flex justify-center items-center space-x-1 sm:space-x-5 ">
                     <li>
-                        <a class="hover:text-blue-400" href="https://www.facebook.com/syahrul.xyz">
+                        <a class="hover:text-blue-400" href="https://www.facebook.com/syahrulfalahbae">
                             <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"
                                 class="w-5 h-5 sm:w-10 sm:h-10">
                                 <path clip-rule="evenodd"
@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="hover:text-red-400" href="https://www.instagram.com/syhrl.xyz">
+                        <a class="hover:text-red-400" href="https://www.instagram.com/syahrulfalahbae">
                             <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"
                                 class="w-5 h-5 sm:w-10 sm:h-10">
                                 <path clip-rule="evenodd"
@@ -43,22 +43,12 @@
                         </a>
                     </li>
                     <li>
-                        <a class="hover:text-black" href="https://twitter.com/rulfadev">
+                        <a class="hover:text-black" href="https://twitter.com/syahrulfalahbae">
                             <svg aria-hidden="true" viewBox="0 0 30 30" fill="currentColor"
                                 class="w-5 h-5 sm:w-11 sm:h-11">
                                 <path
                                     d="M 6 4 C 4.895 4 4 4.895 4 6 L 4 24 C 4 25.105 4.895 26 6 26 L 24 26 C 25.105 26 26 25.105 26 24 L 26 6 C 26 4.895 25.105 4 24 4 L 6 4 z M 8.6484375 9 L 13.259766 9 L 15.951172 12.847656 L 19.28125 9 L 20.732422 9 L 16.603516 13.78125 L 21.654297 21 L 17.042969 21 L 14.056641 16.730469 L 10.369141 21 L 8.8945312 21 L 13.400391 15.794922 L 8.6484375 9 z M 10.878906 10.183594 L 17.632812 19.810547 L 19.421875 19.810547 L 12.666016 10.183594 L 10.878906 10.183594 z">
                                 </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-700" href="https://github.com/rulfadev">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-5 h-5 sm:w-10 sm:h-10">
-                                <path clip-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                    fill-rule="evenodd"></path>
                             </svg>
                         </a>
                     </li>
@@ -104,9 +94,8 @@
                     </div>
                     <div
                         class="card dark:bg-green-600 bg-green-400 py-3 border-3 dark:border-white drop-shadow-(--drop-shadow-light) dark:drop-shadow-(--drop-shadow-dark) w-5/6">
-                        <p class="tip">Stack Tech</p>
-                        <p class="second-text m-1 sm:px-0 px-2">Laravel, Codeigniter, React.js, Next.js, Tailwind CSS,
-                            Bootstrap.</p>
+                        <p class="tip">Contact With Email</p>
+                        <a href="mailto:rulfadev@gmail.com" class="second-text m-1 sm:px-0 px-2">rulfadev@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -131,7 +120,7 @@
                 onclick="window.location.href='{{ route('landing') }}'">
                 <span
                     class="dark:bg-blue-600 bg-blue-400 dark:text-white font-bold flex items-center border-1 dark:border-white">
-                    <p class="mr-2">Jelajahi</p>
+                    <p class="mr-2">Explore</p>
                     <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h24v24H0z" fill="none"></path>
                         <path
