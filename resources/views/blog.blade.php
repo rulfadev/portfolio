@@ -198,260 +198,121 @@
         <!-- End Tech Stack -->
 
         <!-- Start Experience -->
-        <section id="experience" class="container-fluid mx-auto h-screen animate-fadeIn justify-center flex flex-col">
-            <div class="container-fluid px-4 md:px-8 mx-auto">
-                <div class="bg-black rounded-xl py-16 px-4">
-                    <div class="max-w-6xl mx-auto">
-                        <div class="mb-12 text-center">
-                            <div class="flex flex-col items-center justify-center mb-4">
-                                <div class="inline-flex items-center justify-center mb-2">
-                                    <div class="h-px w-8 bg-gradient-to-r from-transparent to-gray-700"></div>
-                                    <h3 class="text-xs font-semibold tracking-[0.2em] text-gray-400 uppercase px-3">
-                                        Portfolio</h3>
-                                    <div class="h-px w-8 bg-gradient-to-l from-transparent to-gray-700"></div>
-                                </div>
-                                <h2 class="text-4xl md:text-5xl font-bold text-white inline-block">Achievements</h2>
-                            </div>
-                            <p class="text-gray-400 max-w-2xl mx-auto text-sm">A collection of recognitions in the field of
-                                web
-                                technology, reflecting a journey of growth and excellence in the digital realm.</p>
+        <section id="experience" class="container-fluid mx-auto h-screen animate-fadeIn justify-center flex flex-col pt-20">
+            <div
+                class="dark:bg-black container mx-auto h-3/4 flex flex-col justify-center items-center shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white">
+                <div class="mb-12 text-center">
+                    <div class="flex flex-col items-center justify-center mb-4">
+                        <div class="inline-flex items-center justify-center mb-2">
+                            <div class="h-px w-8 bg-gradient-to-r from-transparent to-gray-700"></div>
+                            <h2
+                                class="text-4xl md:text-5xl font-bold tracking-[0.2em] dark:text-white inline-block uppercase px-3">
+                                Experience</h2>
+                            <div class="h-px w-8 bg-gradient-to-l from-transparent to-gray-700"></div>
                         </div>
-                        <div class="flex justify-center gap-2 mb-6"><button class="group p-1"
-                                aria-label="Go to achievement 1">
-                                <div class="w-12 h-1 rounded-full transition-all duration-500 bg-white"></div>
-                            </button><button class="group p-1" aria-label="Go to achievement 2">
+
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto text-sm">Highlights of my journey in web
+                        development,
+                        including internships, freelance projects, and academic collaborations that
+                        shaped my practical skills and understanding of the field.</p>
+                </div>
+                <div class="scroll-wrapper overflow-hidden w-full relative items-center flex flex-col h-1/5">
+                    <div class="justify-center items-center h-full w-full">
+                        <div class="content-scroll animate-scroll items-center justify-center mx-10 h-full">
+                            <!-- isi konten di sini -->
+                            <div class="flex items-center">
                                 <div
-                                    class="w-12 h-1 rounded-full transition-all duration-500 bg-gray-800 group-hover:bg-gray-700">
-                                </div>
-                            </button><button class="group p-1" aria-label="Go to achievement 3">
-                                <div
-                                    class="w-12 h-1 rounded-full transition-all duration-500 bg-gray-800 group-hover:bg-gray-700">
-                                </div>
-                            </button></div>
-                        <div class="relative mb-12">
-                            <div
-                                class="relative bg-[#121216] rounded-xl overflow-hidden transition-all duration-700 border border-white/10 shadow-lg">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30 transition-opacity duration-500">
-                                </div>
-                                <div class="p-8 md:p-10 relative z-10">
-                                    <div class="transition-all duration-700 ease-out opacity-100 transform translate-y-0">
-                                        <div class="flex flex-col md:flex-row md:items-start gap-8">
-                                            <div class="relative mx-auto md:mx-0">
-                                                <div
-                                                    class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-xl transform scale-150">
-                                                </div>
-                                                <div
-                                                    class="relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-gray-800 to-black text-white p-4 border border-white/10 shadow-lg">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="lucide lucide-trophy h-8 w-8">
-                                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                                        <path d="M4 22h16"></path>
-                                                        <path
-                                                            d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22">
-                                                        </path>
-                                                        <path
-                                                            d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22">
-                                                        </path>
-                                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                    class="w-full h-full darl:bg-black border-2 shadow-[5px_5px_0_var(--color-blue)] hover:shadow-[7px_7px_0_var(--color-red)] border-zinc-600 flex flex-col p-3 z-30 relative bg-gray-900 dark:bg-white">
+                                    <div class="flex flex-col space-y-3">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="border-2 bg-(--color-red) w-12 h-12">
+                                                    <svg class="p-[5px] isolate" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 48 48">
+                                                        <g fill="white">
+                                                            <path d="M22.5 20.5V17h2v3.5H28v2h-3.5V26h-2v-3.5H19v-2z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M7.057 31.476A2 2 0 0 1 7 31V12a2 2 0 0 1 2-2h30a2 2 0 0 1 2 2v19c0 .244-.044.477-.123.693l3.111 4.76A1 1 0 0 1 43.151 38H4.8a1 1 0 0 1-.849-1.528zM9 12h30v19H9z"
+                                                                clip-rule="evenodd" />
+                                                        </g>
                                                     </svg>
                                                 </div>
-                                                <div
-                                                    class="absolute -bottom-2 -right-2 bg-black text-white text-xs font-bold px-2 py-1 rounded-full border border-white/5">
-                                                    2024</div>
-                                            </div>
-                                            <div class="flex-1 text-center md:text-left">
-                                                <div class="flex flex-col md:flex-row md:items-center gap-2 mb-3">
-                                                    <h4 class="text-2xl md:text-3xl font-bold text-white">LKS Web Tech Metro
-                                                        City
-                                                        2024</h4>
-                                                    <div class="hidden md:block h-4 w-px bg-white/10 mx-2"></div>
-                                                    <div
-                                                        class="inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-black mx-auto md:mx-0">
-                                                        Champion</div>
+                                                <div class="flex flex-col justify-start items-start">
+                                                    <div class="text-white dark:text-black font-medium">Cipta Inovasi
+                                                        Digital
+                                                    </div>
+                                                    <div class="text-gray-400 dark:text-gray-700 text-sm">Completed April
+                                                        2020 - August 2020 |
+                                                        Internship
+                                                    </div>
                                                 </div>
-                                                <p class="text-gray-300 leading-relaxed mb-6">Champion of the Web Technology
-                                                    Competition at Metro City level, demonstrating exceptional skills in
-                                                    frontend
-                                                    and backend development.</p>
                                             </div>
+                                            <div class="text-gray-400 dark:text-gray-700 italic text-sm">React Native
+                                                Developer
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-center space-x-2 border-l-2 border-(--color-blue)/30 dark:border-(--color-red)/30 pl-3">
+                                            <div class="text-(--color-blue) dark:text-(--color-red) text-sm italic">"I
+                                                gained valuable experience
+                                                through an internship at Cipta Inovasi Digital, a hybrid location-based
+                                                company, where I
+                                                worked as a React Native Developer in Batang, Central Java."</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4"><button
-                                class="group relative p-4 pb-8 rounded-lg transition-all duration-500 border border-white/20 bg-[#121216]">
-                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-30">
-                                </div>
-                                <div class="relative z-10 flex flex-col items-center text-center">
-                                    <div
-                                        class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black text-white p-2 mb-3 transition-all duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="lucide lucide-trophy h-8 w-8">
-                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                            <path d="M4 22h16"></path>
-                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                                        </svg>
-                                    </div>
-                                    <h5 class="text-sm font-medium text-white transition-colors duration-300 mb-4">LKS Web
-                                        Tech
-                                        Metro City 2024</h5>
-                                    <div
-                                        class="absolute bottom-0 left-0 right-0 h-2 bg-white transform translate-y-0 transition-transform duration-300">
-                                    </div>
-                                </div>
-                            </button><button
-                                class="group relative p-4 pb-8 rounded-lg transition-all duration-500 border border-white/5 bg-[#0f0f14] hover:bg-[#121216]">
-                                <div class="relative z-10 flex flex-col items-center text-center">
-                                    <div
-                                        class="flex items-center justify-center w-12 h-12 rounded-full bg-[#0e0e12] group-hover:bg-gradient-to-br group-hover:from-gray-800 group-hover:to-black text-white p-2 mb-3 transition-all duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="lucide lucide-medal h-8 w-8">
-                                            <path
-                                                d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15">
-                                            </path>
-                                            <path d="M11 12 5.12 2.2"></path>
-                                            <path d="m13 12 5.88-9.8"></path>
-                                            <path d="M8 7h8"></path>
-                                            <circle cx="12" cy="17" r="5"></circle>
-                                            <path d="M12 18v-2h-.5"></path>
-                                        </svg>
-                                    </div>
-                                    <h5
-                                        class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300 mb-4">
-                                        LKS Web Tech Lampung Province 2024</h5>
-                                    <div
-                                        class="absolute bottom-0 left-0 right-0 h-2 bg-white transform translate-y-full transition-transform duration-300">
+                        <div class="content-scroll animate-scroll items-center justify-center mx-10 h-full">
+                            <!-- isi konten di sini -->
+                            <div class="flex items-center">
+                                <div
+                                    class="w-full h-full darl:bg-black border-2 shadow-[5px_5px_0_var(--color-blue)] hover:shadow-[7px_7px_0_var(--color-red)] border-zinc-600 flex flex-col p-3 z-30 relative bg-gray-900 dark:bg-white">
+                                    <div class="flex flex-col space-y-3">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="border-2 bg-(--color-red) w-12 h-12">
+                                                    <svg class="p-[5px] isolate" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 48 48">
+                                                        <g fill="white">
+                                                            <path d="M22.5 20.5V17h2v3.5H28v2h-3.5V26h-2v-3.5H19v-2z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M7.057 31.476A2 2 0 0 1 7 31V12a2 2 0 0 1 2-2h30a2 2 0 0 1 2 2v19c0 .244-.044.477-.123.693l3.111 4.76A1 1 0 0 1 43.151 38H4.8a1 1 0 0 1-.849-1.528zM9 12h30v19H9z"
+                                                                clip-rule="evenodd" />
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex flex-col justify-start items-start">
+                                                    <div class="text-white dark:text-black font-medium">Belitik ID
+                                                    </div>
+                                                    <div class="text-gray-400 dark:text-gray-700 text-sm">On Going January
+                                                        2025 - Now |
+                                                        Self-employed
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-gray-400 dark:text-gray-700italic text-sm">Founder
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-center space-x-2 border-(--color-blue)/30 dark:border-(--color-red)/30 pl-3">
+                                            <div class="text-(--color-blue) dark:text-(--color-red) text-sm italic">"The
+                                                company that I built and is
+                                                currently being developed with the core team, where this project will be
+                                                completed in
+                                                2026."</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </button><button
-                                class="group relative p-4 pb-8 rounded-lg transition-all duration-500 border border-white/5 bg-[#0f0f14] hover:bg-[#121216]">
-                                <div class="relative z-10 flex flex-col items-center text-center">
-                                    <div
-                                        class="flex items-center justify-center w-12 h-12 rounded-full bg-[#0e0e12] group-hover:bg-gradient-to-br group-hover:from-gray-800 group-hover:to-black text-white p-2 mb-3 transition-all duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="lucide lucide-award h-8 w-8">
-                                            <path
-                                                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
-                                            </path>
-                                            <circle cx="12" cy="8" r="6"></circle>
-                                        </svg>
-                                    </div>
-                                    <h5
-                                        class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300 mb-4">
-                                        LKS Web Tech National 2024</h5>
-                                    <div
-                                        class="absolute bottom-0 left-0 right-0 h-2 bg-white transform translate-y-full transition-transform duration-300">
-                                    </div>
-                                </div>
-                            </button></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- End Experience -->
 
-        <!-- Join section -->
-        <section class="container mx-auto relative z-10 overflow-hidden bg-green-600 my-10 py-16 px-8 rounded-lg shadow-lg">
-            <div class="-mx-4 flex flex-wrap items-center">
-                <div class="w-full px-4 lg:w-1/2">
-                    <div class="text-center lg:text-left ">
-                        <div class="mb-10 lg:mb-0 ">
-                            <h1
-                                class="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
-                                Join us to create your news.</h1>
-                            <p
-                                class="w-full text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed text-white">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full px-4 lg:w-1/2">
-                    <div class="text-center lg:text-right"><a
-                            class="font-semibold rounded-lg mx-auto inline-flex items-center justify-center bg-white py-4 px-9 hover:bg-opacity-90 hover:text-green-600 text-lg"
-                            href="{{ url('/register') }}">Join Us</a>
-                    </div>
-                </div>
-            </div>
-            <span class="absolute top-0 right-0 -z-10">
-                <svg width="388" height="250" viewBox="0 0 388 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.05" d="M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z"
-                        fill="url(#paint0_linear_971_6910)"></path>
-                    <defs>
-                        <linearGradient id="paint0_linear_971_6910" x1="60.5" y1="111" x2="287" y2="111"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.520507" stop-color="white"></stop>
-                            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                        </linearGradient>
-                    </defs>
-                </svg></span><span class="absolute top-0 right-0 -z-10"><svg width="324" height="250" viewBox="0 0 324 220"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.05" d="M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z"
-                        fill="url(#paint0_linear_971_6911)"></path>
-                    <defs>
-                        <linearGradient id="paint0_linear_971_6911" x1="60.5" y1="111" x2="287" y2="111"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.520507" stop-color="white"></stop>
-                            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                        </linearGradient>
-                    </defs>
-                </svg></span><span class="absolute top-4 left-4 -z-10"><svg width="43" height="56" viewBox="0 0 43 56"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.5">
-                        <circle cx="40.9984" cy="1.49626" r="1.49626" transform="rotate(90 40.9984 1.49626)" fill="white">
-                        </circle>
-                        <circle cx="27.8304" cy="1.49626" r="1.49626" transform="rotate(90 27.8304 1.49626)" fill="white">
-                        </circle>
-                        <circle cx="14.6644" cy="1.49626" r="1.49626" transform="rotate(90 14.6644 1.49626)" fill="white">
-                        </circle>
-                        <circle cx="1.49642" cy="1.49626" r="1.49626" transform="rotate(90 1.49642 1.49626)" fill="white">
-                        </circle>
-                        <circle cx="40.9984" cy="14.6642" r="1.49626" transform="rotate(90 40.9984 14.6642)" fill="white">
-                        </circle>
-                        <circle cx="27.8304" cy="14.6642" r="1.49626" transform="rotate(90 27.8304 14.6642)" fill="white">
-                        </circle>
-                        <circle cx="14.6644" cy="14.6642" r="1.49626" transform="rotate(90 14.6644 14.6642)" fill="white">
-                        </circle>
-                        <circle cx="1.49642" cy="14.6642" r="1.49626" transform="rotate(90 1.49642 14.6642)" fill="white">
-                        </circle>
-                        <circle cx="40.9984" cy="27.8302" r="1.49626" transform="rotate(90 40.9984 27.8302)" fill="white">
-                        </circle>
-                        <circle cx="27.8304" cy="27.8302" r="1.49626" transform="rotate(90 27.8304 27.8302)" fill="white">
-                        </circle>
-                        <circle cx="14.6644" cy="27.8302" r="1.49626" transform="rotate(90 14.6644 27.8302)" fill="white">
-                        </circle>
-                        <circle cx="1.49642" cy="27.8302" r="1.49626" transform="rotate(90 1.49642 27.8302)" fill="white">
-                        </circle>
-                        <circle cx="40.9984" cy="40.9982" r="1.49626" transform="rotate(90 40.9984 40.9982)" fill="white">
-                        </circle>
-                        <circle cx="27.8304" cy="40.9963" r="1.49626" transform="rotate(90 27.8304 40.9963)" fill="white">
-                        </circle>
-                        <circle cx="14.6644" cy="40.9982" r="1.49626" transform="rotate(90 14.6644 40.9982)" fill="white">
-                        </circle>
-                        <circle cx="1.49642" cy="40.9963" r="1.49626" transform="rotate(90 1.49642 40.9963)" fill="white">
-                        </circle>
-                        <circle cx="40.9984" cy="54.1642" r="1.49626" transform="rotate(90 40.9984 54.1642)" fill="white">
-                        </circle>
-                        <circle cx="27.8304" cy="54.1642" r="1.49626" transform="rotate(90 27.8304 54.1642)" fill="white">
-                        </circle>
-                        <circle cx="14.6644" cy="54.1642" r="1.49626" transform="rotate(90 14.6644 54.1642)" fill="white">
-                        </circle>
-                        <circle cx="1.49642" cy="54.1642" r="1.49626" transform="rotate(90 1.49642 54.1642)" fill="white">
-                        </circle>
-                    </g>
-                </svg>
-            </span>
-        </section>
         <!-- Review section -->
         <section class="py-16 bg-gray-50">
             <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -717,295 +578,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </section>
-        <!-- Team section -->
-        <section class="py-20 px-4">
-            <div class="container mx-auto max-w-7xl">
-                <!-- Section Header -->
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2
-                        class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                        Meet Our Talented Team</h2>
-                    <div class="h-1 w-20 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
-                    <p class="text-gray-600 text-lg">We're a dynamic group of individuals who are passionate about what we
-                        do
-                        and dedicated to delivering the best results for our clients.</p>
-                </div>
-
-                <!-- Team Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Team Member 1 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">Alex Morgan</h3>
-                            <p class="text-indigo-600 font-medium">CEO & Founder</p>
-                            <p class="text-gray-600 mt-2">Visionary leader with 15+ years of experience in tech innovation.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 2 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">Sarah Johnson</h3>
-                            <p class="text-indigo-600 font-medium">Chief Design Officer</p>
-                            <p class="text-gray-600 mt-2">Award-winning designer with a passion for creating beautiful,
-                                functional interfaces.</p>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 3 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">Michael Chen</h3>
-                            <p class="text-indigo-600 font-medium">CTO</p>
-                            <p class="text-gray-600 mt-2">Tech genius with expertise in AI and machine learning
-                                technologies.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 4 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">Emily Rodriguez</h3>
-                            <p class="text-indigo-600 font-medium">Marketing Director</p>
-                            <p class="text-gray-600 mt-2">Creative strategist who excels at building and promoting brands.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Second Row -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-                    <!-- Team Member 5 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">David Wilson</h3>
-                            <p class="text-indigo-600 font-medium">Lead Developer</p>
-                            <p class="text-gray-600 mt-2">Full-stack developer with a knack for solving complex problems.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 6 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">Sophia Lee</h3>
-                            <p class="text-indigo-600 font-medium">UX Researcher</p>
-                            <p class="text-gray-600 mt-2">Human-centered designer focused on creating intuitive user
-                                experiences.</p>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 7 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">James Taylor</h3>
-                            <p class="text-indigo-600 font-medium">Product Manager</p>
-                            <p class="text-gray-600 mt-2">Strategic thinker who bridges the gap between business and
-                                technology.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 8 -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Team member"
-                                class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-800">Olivia Martinez</h3>
-                            <p class="text-indigo-600 font-medium">Customer Success</p>
-                            <p class="text-gray-600 mt-2">Dedicated to ensuring our clients achieve their goals and succeed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Join Our Team CTA -->
-                <div class="mt-20 text-center">
-                    <div class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 p-px rounded-lg">
-                        <a href="#"
-                            class="block bg-white hover:bg-gray-50 transition-colors duration-200 rounded-lg px-8 py-4 font-medium text-indigo-600">
-                            Join Our Team <span class="ml-2">→</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
