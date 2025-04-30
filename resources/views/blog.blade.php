@@ -1,9 +1,11 @@
+@section('title', 'Rulfa Dev - Portfolio')
 @extends('layouts.app')
 
 @section('content')
-    <div class="content max-w-10xl bg-white dark:bg-[#0A192F] pt-50">
+    <div class="content max-w-10xl bg-white dark:bg-[#0A192F]">
         <!-- Start About Section -->
-        <section id="about" class="container mx-auto animate-fade-in-up justify-center items-start flex flex-col gap-5">
+        <section id="about"
+            class="container mx-auto h-screen animate-fade-in-up justify-center items-start flex flex-col gap-5">
             <p
                 class="inline-block p-4 text-small font-bold dark:bg-transparent dark:text-white bg-white text-black brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2">
                 <span class="mr-1 inline-block h-2 w-2 animate-pulse rounded-full bg-rose-500 justify-center"></span>
@@ -43,7 +45,7 @@
         <!-- End About Section -->
 
         <!-- Start Project Github -->
-        <section id="projects" class="py-8 md:py-12 lg:py-16 animate-fadeIn container mx-auto">
+        <section id="project" class="container mx-auto h-screen animate-fadeIn justify-center flex flex-col">
             @if ($repositories && is_array($repositories))
                 <div class="space-y-10">
                     <div class="text-start">
@@ -125,7 +127,8 @@
         <!-- End Project Github -->
 
         <!-- Start Tech Stack -->
-        <section id="techstack" class="py-8 md:py-12 lg:py-16 animate-fadeIn mx-auto bg-gray-50 dark:bg-[#020d1f]">
+        <section id="techstack"
+            class="container-fluid mx-auto h-screen animate-fadeIn justify-center flex flex-col bg-gray-50 dark:bg-[#020d1f]">
             <div class="container px-4 md:px-8 mx-auto space-y-10">
                 <div class="text-start">
                     <h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-black dark:text-white">Tech Stack</h2>
@@ -194,158 +197,170 @@
         </section>
         <!-- End Tech Stack -->
 
-        <!-- Start Project Section -->
-        <section id="project" class="container sm:flex flex-col lg:flex-row space-y-5 lg:space-y-0 gap-20 mx-auto">
-            <!-- Sidebar Kiri -->
-            <div class="hidden lg:w-4/12 w-full sm:block">
-                @if (!$popularArticles->isEmpty())
-                    <div class="sticky top-30 flex flex-col">
-                        <h1
-                            class="text-2xl font-bold p-4 w-3/5 mx-auto mb-5 text-center dark:bg-transparent dark:text-white bg-white text-black brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2">
-                            🚀 Popular
-                            Project
-                        </h1>
-                        @foreach($popularArticles as $popularArticle)
-                            <div class="flex w-full h-25 max-w-full mx-auto overflow-hidden cursor-pointer my-3 dark:bg-transparent bg-white brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
-                                onclick="window.location='{{ url('/articles/' . $popularArticle->slug) }}'">
-                                <div class="text-sm p-5 flex flex-col justify-center w-full">
-                                    <a href="{{ url('/articles/' . $popularArticle->slug) }}"
-                                        class="dark:text-white text-black font-medium text-xl dark:hover:text-[#FF007A] hover:text-[#00E0FF] leading-none">
-                                        {{ Str::limit($popularArticle->title, 40, '...') }}
-                                    </a>
-                                    <p class="mt-1 text-slate-500 dark:text-slate-300">
-                                        {{ preg_replace('/\s+\S*$/', '', Str::limit(strip_tags($popularArticle->content), 70)) }}...
-                                    </p>
-                                    <a href="#"
-                                        class="dark:text-white text-black dark:text-primary-dark hover:font-bold text-end">View
-                                        Project →</a>
+        <!-- Start Experience -->
+        <section id="experience" class="container-fluid mx-auto h-screen animate-fadeIn justify-center flex flex-col">
+            <div class="container-fluid px-4 md:px-8 mx-auto">
+                <div class="bg-black rounded-xl py-16 px-4">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="mb-12 text-center">
+                            <div class="flex flex-col items-center justify-center mb-4">
+                                <div class="inline-flex items-center justify-center mb-2">
+                                    <div class="h-px w-8 bg-gradient-to-r from-transparent to-gray-700"></div>
+                                    <h3 class="text-xs font-semibold tracking-[0.2em] text-gray-400 uppercase px-3">
+                                        Portfolio</h3>
+                                    <div class="h-px w-8 bg-gradient-to-l from-transparent to-gray-700"></div>
+                                </div>
+                                <h2 class="text-4xl md:text-5xl font-bold text-white inline-block">Achievements</h2>
+                            </div>
+                            <p class="text-gray-400 max-w-2xl mx-auto text-sm">A collection of recognitions in the field of
+                                web
+                                technology, reflecting a journey of growth and excellence in the digital realm.</p>
+                        </div>
+                        <div class="flex justify-center gap-2 mb-6"><button class="group p-1"
+                                aria-label="Go to achievement 1">
+                                <div class="w-12 h-1 rounded-full transition-all duration-500 bg-white"></div>
+                            </button><button class="group p-1" aria-label="Go to achievement 2">
+                                <div
+                                    class="w-12 h-1 rounded-full transition-all duration-500 bg-gray-800 group-hover:bg-gray-700">
+                                </div>
+                            </button><button class="group p-1" aria-label="Go to achievement 3">
+                                <div
+                                    class="w-12 h-1 rounded-full transition-all duration-500 bg-gray-800 group-hover:bg-gray-700">
+                                </div>
+                            </button></div>
+                        <div class="relative mb-12">
+                            <div
+                                class="relative bg-[#121216] rounded-xl overflow-hidden transition-all duration-700 border border-white/10 shadow-lg">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30 transition-opacity duration-500">
+                                </div>
+                                <div class="p-8 md:p-10 relative z-10">
+                                    <div class="transition-all duration-700 ease-out opacity-100 transform translate-y-0">
+                                        <div class="flex flex-col md:flex-row md:items-start gap-8">
+                                            <div class="relative mx-auto md:mx-0">
+                                                <div
+                                                    class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-xl transform scale-150">
+                                                </div>
+                                                <div
+                                                    class="relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-gray-800 to-black text-white p-4 border border-white/10 shadow-lg">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-trophy h-8 w-8">
+                                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                                        <path d="M4 22h16"></path>
+                                                        <path
+                                                            d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22">
+                                                        </path>
+                                                        <path
+                                                            d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22">
+                                                        </path>
+                                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div
+                                                    class="absolute -bottom-2 -right-2 bg-black text-white text-xs font-bold px-2 py-1 rounded-full border border-white/5">
+                                                    2024</div>
+                                            </div>
+                                            <div class="flex-1 text-center md:text-left">
+                                                <div class="flex flex-col md:flex-row md:items-center gap-2 mb-3">
+                                                    <h4 class="text-2xl md:text-3xl font-bold text-white">LKS Web Tech Metro
+                                                        City
+                                                        2024</h4>
+                                                    <div class="hidden md:block h-4 w-px bg-white/10 mx-2"></div>
+                                                    <div
+                                                        class="inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-black mx-auto md:mx-0">
+                                                        Champion</div>
+                                                </div>
+                                                <p class="text-gray-300 leading-relaxed mb-6">Champion of the Web Technology
+                                                    Competition at Metro City level, demonstrating exceptional skills in
+                                                    frontend
+                                                    and backend development.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
-                @endif
-            </div>
-            <!-- Artikel -->
-            <div class="lg:w-8/12 w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
-                <!-- Artikel Pilihan -->
-                @if($latestArticle)
-                    <div class="col-span-2 w-full max-w-full mx-auto cursor-pointer brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
-                        onclick="window.location='{{ url('/articles/' . $latestArticle->slug) }}'">
-                        <img class="h-90 w-full object-cover md:h-90 md:w-full mask-b-from-80%"
-                            src="{{ url('/storage/' . $latestArticle->image) }}" alt="{{ $latestArticle->title }}">
-                        <div class="p-8 flex flex-col justify-center">
-                            <div
-                                class="uppercase leading-6 tracking-wide text-sm text-[#00E0FF] dark:text-[#FF007A] font-semibold">
-                                {{ $latestArticle->category->name ?? 'Uncategorized' }}
-                            </div>
-                            <a href="{{ url('/articles/' . $latestArticle->slug) }}"
-                                class="block mt-1 text-lg leading-tight font-medium dark:text-white text-black leading-none">
-                                {{ $latestArticle->title }}
-                            </a>
-                            <p class="mt-2 text-slate-500 dark:text-slate-300">
-                                {{ preg_replace('/\s+\S*$/', '', Str::limit(strip_tags($latestArticle->content), 150)) }}...
-                            </p>
-                            <p class="mt-2 text-slate-400 dark:text-slate-200 text-sm">Published on
-                                {{ $latestArticle->created_at->translatedFormat('l, j F Y | H:i') }}
-                            </p>
                         </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4"><button
+                                class="group relative p-4 pb-8 rounded-lg transition-all duration-500 border border-white/20 bg-[#121216]">
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-30">
+                                </div>
+                                <div class="relative z-10 flex flex-col items-center text-center">
+                                    <div
+                                        class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black text-white p-2 mb-3 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="lucide lucide-trophy h-8 w-8">
+                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                            <path d="M4 22h16"></path>
+                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                        </svg>
+                                    </div>
+                                    <h5 class="text-sm font-medium text-white transition-colors duration-300 mb-4">LKS Web
+                                        Tech
+                                        Metro City 2024</h5>
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 h-2 bg-white transform translate-y-0 transition-transform duration-300">
+                                    </div>
+                                </div>
+                            </button><button
+                                class="group relative p-4 pb-8 rounded-lg transition-all duration-500 border border-white/5 bg-[#0f0f14] hover:bg-[#121216]">
+                                <div class="relative z-10 flex flex-col items-center text-center">
+                                    <div
+                                        class="flex items-center justify-center w-12 h-12 rounded-full bg-[#0e0e12] group-hover:bg-gradient-to-br group-hover:from-gray-800 group-hover:to-black text-white p-2 mb-3 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="lucide lucide-medal h-8 w-8">
+                                            <path
+                                                d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15">
+                                            </path>
+                                            <path d="M11 12 5.12 2.2"></path>
+                                            <path d="m13 12 5.88-9.8"></path>
+                                            <path d="M8 7h8"></path>
+                                            <circle cx="12" cy="17" r="5"></circle>
+                                            <path d="M12 18v-2h-.5"></path>
+                                        </svg>
+                                    </div>
+                                    <h5
+                                        class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300 mb-4">
+                                        LKS Web Tech Lampung Province 2024</h5>
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 h-2 bg-white transform translate-y-full transition-transform duration-300">
+                                    </div>
+                                </div>
+                            </button><button
+                                class="group relative p-4 pb-8 rounded-lg transition-all duration-500 border border-white/5 bg-[#0f0f14] hover:bg-[#121216]">
+                                <div class="relative z-10 flex flex-col items-center text-center">
+                                    <div
+                                        class="flex items-center justify-center w-12 h-12 rounded-full bg-[#0e0e12] group-hover:bg-gradient-to-br group-hover:from-gray-800 group-hover:to-black text-white p-2 mb-3 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="lucide lucide-award h-8 w-8">
+                                            <path
+                                                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                                            </path>
+                                            <circle cx="12" cy="8" r="6"></circle>
+                                        </svg>
+                                    </div>
+                                    <h5
+                                        class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300 mb-4">
+                                        LKS Web Tech National 2024</h5>
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 h-2 bg-white transform translate-y-full transition-transform duration-300">
+                                    </div>
+                                </div>
+                            </button></div>
                     </div>
-                @endif
-
-                <!-- Artikel Lainnya -->
-                @foreach($articlesProject as $article)
-                    <div class="md:flex w-full col-span-2 md:col-span-1 md:h-30 max-w-full overflow-hidden cursor-pointer brutal-transition shadow-(--box-shadow-blue) hover:shadow-(--box-shadow-red-hover) border-2 dark:border-white"
-                        onclick="window.location='{{ url('/articles/' . $article->slug) }}'">
-                        <div class="md:shrink-0">
-                            <img class="h-90 w-full md:h-full md:w-30 object-cover mask-r-from-80%"
-                                src="{{ url('/storage/' . $article->image) }}" alt="{{ $article->title }}">
-                        </div>
-                        <div class="p-3 flex flex-col justify-center">
-                            <div
-                                class="uppercase leading-6 tracking-wide text-sm text-[#00E0FF] dark:text-[#FF007A] font-semibold">
-                                {{ $article->category->name ?? 'Uncategorized' }}
-                            </div>
-                            <a href="{{ url('/articles/' . $article->slug) }}"
-                                class="mt-1 block text-md leading-tight font-medium dark:text-white text-black hover:text-[#00E0FF] leading-none">
-                                {{ Str::limit($article->title, 40, '...') }}
-                            </a>
-                            <p class="text-slate-500 dark:text-slate-300">
-                                {{ preg_replace('/\s+\S*$/', '', Str::limit(strip_tags($popularArticle->content), 30)) }}...
-                            </p>
-                            <p class="text-slate-400 text-xs">
-                                {{ $article->created_at->translatedFormat('j M Y | H:i') }}
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
-
-                <!-- Pagination -->
-                <div class="col-span-2 w-full">
-                    @if($articlesProject->isNotEmpty())
-                        {{ $articlesProject->onEachSide(3)->links('vendor.pagination.brutalism') }}
-                    @endif
-                </div>
-            </div>
-        </section>
-        <!-- End Project Section -->
-
-        <!-- Porto section -->
-        <section class="text-gray-600 body-font w-full bg-gray-50">
-            <div class="container mx-auto flex px-5 my-10 py-10 md:flex-row flex-col items-center">
-                <div
-                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-                        <br class="hidden lg:inline-block">readymade gluten
-                    </h1>
-                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-                        plant
-                        cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken
-                        authentic
-                        tumeric truffaut hexagon try-hard chambray.</p>
-                    <div class="flex justify-center">
-                        <button
-                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                        <button
-                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-                    </div>
-                </div>
-                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
                 </div>
             </div>
         </section>
-        <!-- Recent Article Categories -->
-        <section class="container mx-auto">
-            <!-- inspired by tailwindcss.com -->
-            <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
-                @foreach($articles as $article)
-                    <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
-                        <div class="order-1 sm:ml-6 xl:ml-0">
-                            <h3 class="mb-1 text-slate-900 font-semibold">
-                                <span
-                                    class="uppercase mb-1 block text-sm leading-6 text-indigo-500">{{ $article->category->name ?? 'Uncategorized' }}</span>
-                                {{ Str::limit($article->title, 40, '...') }}
-                            </h3>
-                            <div class="prose prose-slate prose-sm text-slate-600">
-                                <p>{{ Str::limit(strip_tags($article->content), 100) }}</p>
-                            </div><a
-                                class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
-                                href="{{ url('/articles/' . $article->slug) }}">Read
-                                more
-                                <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400" width="3"
-                                    height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M0 0L3 3L0 6"></path>
-                                </svg></a>
-                        </div>
-                        <img src="{{ url('/storage/' . $article->image) }}" alt="{{ $article->title }}"
-                            class="mb-6 shadow-md rounded-lg bg-slate-50 h-90 w-full sm:min-w-50 sm:h-60 sm:mb-0 xl:mb-6 xl:w-full object-cover"
-                            width="1216" height="640">
-                    </li>
-                @endforeach
-            </ul>
-        </section>
+        <!-- End Experience -->
+
         <!-- Join section -->
         <section class="container mx-auto relative z-10 overflow-hidden bg-green-600 my-10 py-16 px-8 rounded-lg shadow-lg">
             <div class="-mx-4 flex flex-wrap items-center">

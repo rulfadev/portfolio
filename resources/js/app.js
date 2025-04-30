@@ -15,3 +15,4 @@ document.getElementById('dark-mode-toggle').addEventListener('change', function 
         document.documentElement.classList.remove('dark');
     }
 });
+
