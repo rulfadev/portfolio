@@ -64,7 +64,7 @@ class LandingController extends Controller
         //     ->get();
 
         // if ($latestArticle === null || $articles->isEmpty() || $articlesProject->isEmpty() || $popularArticles->isEmpty()) {
-        //     return view('blog', [
+        //     return view('landing', [
         //         'latestArticle' => null,
         //         'articles' => collect([]),
         //         'popularArticles' => collect([]),
@@ -73,7 +73,7 @@ class LandingController extends Controller
         //     ])->with('error', 'No articles available at the moment. Please check back later.');
         // }
 
-        // return view('blog', compact('latestArticle', 'articles', 'popularArticles', 'articlesProject', 'repositories'));
-        return view('blog', compact('repositories'));
+        // return view('landing', compact('latestArticle', 'articles', 'popularArticles', 'articlesProject', 'repositories'));
+        return view('landing', compact('repositories'));
     }
 }

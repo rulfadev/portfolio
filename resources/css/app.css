@@ -24,23 +24,6 @@
     --color-red: rgba(255, 0, 122, 1);
 }
 
-.content-scroll {
-  animation: scroll 20s ease-in-out infinite;
-}
-
-@keyframes scroll {
-  0%, 30% {
-    transform: translateY(0%);
-  }
-  35%, 65% {
-    transform: translateY(-100%);
-  }
-  70%, 100% {
-    transform: translateY(0%);
-  }
-}
-
-
 html {
     scroll-behavior: smooth;
 }
