@@ -43,14 +43,14 @@
                         class="card dark:bg-red-600 bg-red-400 py-3 border-3 dark:border-white drop-shadow-(--drop-shadow-light) dark:drop-shadow-(--drop-shadow-dark) w-5/6">
                         <p class="tip">Connect With Email</p>
                         <a href="javascript:void(0)" onclick="window.open('mailto:rulfadev@gmail.com')"
-                            class="second-text m-1 sm:px-0 px-2">rulfadev@gmail.com</a>
+                            class="second-text m-2 sm:px-0 px-2 text-xs sm:text-base">rulfadev@gmail.com</a>
                     </div>
                     <div
                         class="card dark:bg-yellow-600 bg-yellow-400 py-3 border-3 dark:border-white drop-shadow-(--drop-shadow-light) dark:drop-shadow-(--drop-shadow-dark) w-5/6">
                         <p class="tip">Connect With Whatsapp</p>
                         <a href="javascript:void(0)"
                             onclick="window.open('https://wa.me/6285213320894?text=Halo%20Kak%2C%20maaf%20ganggu%20waktunya.%20Saya%20%5Bnama%20anda%5D%20dari%20%5Bnama%20perusahaan%2Finstansi%5D.%0ASaat%20ini%20kami%20sedang%20membuka%20lowongan%20untuk%20posisi%20%5Bnama%20posisi%5D.%0AKalau%20Kakak%20tertarik%20atau%20ada%20teman%20yang%20mungkin%20cocok%2C%20boleh%20banget%20hubungi%20saya%20ya%20%F0%9F%98%8A', '_blank')"
-                            class="second-text m-1 sm:px-0 px-2">Whatsapp +62 8521-3320-894</a>
+                            class="second-text m-2 sm:px-0 px-2 text-xs sm:text-base">Whatsapp +62 8521-3320-894</a>
                     </div>
                     <div
                         class="card dark:bg-green-600 bg-green-400 py-3 border-3 dark:border-white drop-shadow-(--drop-shadow-light) dark:drop-shadow-(--drop-shadow-dark) w-5/6">
