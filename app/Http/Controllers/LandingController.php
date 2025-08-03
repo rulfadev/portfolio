@@ -12,32 +12,34 @@ class LandingController extends Controller
     {
         // Github API
 
-        $username = 'rulfadev'; // Ganti dengan username kamu
-        // $token = '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';
+        $username = env('GITHUB_USERNAME'); // Ganti dengan username kamu
+        $token = env('GITHUB_TOKEN'); // Token GitHub jika diperlukan
 
-        // $response = Http::withToken($token)
-        //     ->get("https://api.github.com/users/{$username}/repos?per_page=6&sort=updated&direction=desc");
-        // $response = Http::get("https://api.github.com/users/rulfadev/repos?per_page=6&sort=updated&direction=desc");
+        $response = Http::withToken($token)
+            ->get("https://api.github.com/users/{$username}/repos?per_page=6&sort=updated&direction=desc");
+        $response = Http::get("https://api.github.com/users/{$username}/repos?per_page=6&sort=updated&direction=desc");
 
-        // if (!$response->successful()) {
-        //     $repositories = collect([]);
-        // } else {
-        //     if ($response->status() === 403 || $response->status() === 404) {
-        //         $repositories = collect([]);
-        //     }
-        //     $repositories = $response->json();
-        // }
+        if (!$response->successful()) {
+            $repositories = collect([]);
+        } else {
+            if ($response->status() === 403 || $response->status() === 404) {
+                $repositories = collect([]);
+            }
+            $repositories = $response->json();
+        }
 
-        $response = json_decode(file_get_contents(resource_path('data/dummygit.json')), true); // dumy data
-        $repositories = collect($response)
-            ->sortByDesc('updated_at')
-            ->take(6)
-            ->map(function ($repo) {
-                $repo['description'] = str()->limit($repo['description'], 50);
-                return $repo;
-            })
-            ->values()
-            ->all();
+        // Data Dummy (hapus komentar jika ingin menggunakan data dummy)
+
+        // $response = json_decode(file_get_contents(resource_path('data/dummygit.json')), true);
+        // $repositories = collect($response)
+        //     ->sortByDesc('updated_at')
+        //     ->take(6)
+        //     ->map(function ($repo) {
+        //         $repo['description'] = str()->limit($repo['description'], 50);
+        //         return $repo;
+        //     })
+        //     ->values()
+        //     ->all();
 
         // Articles
 

@@ -1,36 +1,64 @@
-# Release Notes
+# Changelog
 
-## [Unreleased](https://github.com/laravel/laravel/compare/v12.0.6...12.x)
+All notable changes to this project will be documented in this file.
 
-## [v12.0.6](https://github.com/laravel/laravel/compare/v12.0.5...v12.0.6) - 2025-04-08
+## [v1.4.2] - 2025-08-04
 
-**Full Changelog**: https://github.com/laravel/laravel/compare/v12.0.5...v12.0.6
+### Changed
+- Update Readme
+- Update API
+- Update env.example
+- Update Changelog
 
-## [v12.0.5](https://github.com/laravel/laravel/compare/v12.0.4...v12.0.5) - 2025-04-02
+## [v1.4.1] - 2025-05-01
 
-* [12.x] Update `config/mail.php` to match the latest core configuration by [@AhmedAlaa4611](https://github.com/AhmedAlaa4611) in https://github.com/laravel/laravel/pull/6594
+### Changed
+- Update Card
 
-## [v12.0.4](https://github.com/laravel/laravel/compare/v12.0.3...v12.0.4) - 2025-03-31
+## [v1.4] - 2025-05-01
 
-* Bump vite from 6.0.11 to 6.2.3 - Vulnerability patch by [@abdel-aouby](https://github.com/abdel-aouby) in https://github.com/laravel/laravel/pull/6586
-* Bump vite from 6.2.3 to 6.2.4 by [@thinkverse](https://github.com/thinkverse) in https://github.com/laravel/laravel/pull/6590
+### Added
+- Update Blog to Landing
+- Responsive design improvements
+- Update Footer
 
-## [v12.0.3](https://github.com/laravel/laravel/compare/v12.0.2...v12.0.3) - 2025-03-17
+## [v1.3.2] - 2025-05-01
 
-* Remove reverted change from CHANGELOG.md by [@AJenbo](https://github.com/AJenbo) in https://github.com/laravel/laravel/pull/6565
-* Improves clarity in app.css file by [@AhmedAlaa4611](https://github.com/AhmedAlaa4611) in https://github.com/laravel/laravel/pull/6569
-* [12.x] Refactor: Structural improvement for clarity by [@AhmedAlaa4611](https://github.com/AhmedAlaa4611) in https://github.com/laravel/laravel/pull/6574
-* Bump axios from 1.7.9 to 1.8.2 - Vulnerability patch by [@abdel-aouby](https://github.com/abdel-aouby) in https://github.com/laravel/laravel/pull/6572
-* [12.x] Remove Unnecessarily [@source](https://github.com/source) by [@AhmedAlaa4611](https://github.com/AhmedAlaa4611) in https://github.com/laravel/laravel/pull/6584
+### Changed
+- Update Landing
 
-## [v12.0.2](https://github.com/laravel/laravel/compare/v12.0.1...v12.0.2) - 2025-03-04
+## [v1.3.1] - 2025-04-30
 
-* Make the github test action run out of the box independent of the choice of testing framework by [@ndeblauw](https://github.com/ndeblauw) in https://github.com/laravel/laravel/pull/6555
+### Removed
+- Delete Migration
 
-## [v12.0.1](https://github.com/laravel/laravel/compare/v12.0.0...v12.0.1) - 2025-02-24
+## [v1.3] - 2025-04-30
 
-* [12.x] prefer stable stability by [@pataar](https://github.com/pataar) in https://github.com/laravel/laravel/pull/6548
+### Removed
+- Delete Article
 
-## [v12.0.0 (2025-??-??)](https://github.com/laravel/laravel/compare/v11.0.2...v12.0.0)
+## [v1.2] - 2025-04-30
 
-Laravel 12 includes a variety of changes to the application skeleton. Please consult the diff to see what's new.
+### Removed
+- Remove Filament
+- Remove Article
+
+### Changed
+- Update Landing 30%
+- Update Card 100%
+
+## [v1.1] - 2025-04-29
+
+### Added
+- Add MinifyHTML
+- Add Dummy Data Github
+
+### Fixed
+- Fixed Github API
+- Fixed Card
+- Fixed Navbar
+
+## [v1.0] - 2025-04-27
+
+### Added
+- Initial release
