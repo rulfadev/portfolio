@@ -40,6 +40,9 @@ class SiteSettingController extends Controller
 
             'site_logo' => ['nullable', 'file', 'mimes:jpg,jpeg,png,webp,svg', 'max:2048'],
             'remove_site_logo' => ['nullable', 'boolean'],
+
+            'site_favicon' => ['nullable', 'file', 'mimes:ico,png,jpg,jpeg,webp,svg', 'max:1024'],
+            'remove_site_favicon' => ['nullable', 'boolean'],
         ]);
 
         $validated['business_phone'] = $this->normalizePhone($validated['business_phone'] ?? null);
@@ -48,6 +51,8 @@ class SiteSettingController extends Controller
         $settingsData = Arr::except($validated, [
             'site_logo',
             'remove_site_logo',
+            'site_favicon',
+            'remove_site_favicon',
         ]);
 
         foreach ($settingsData as $key => $value) {
@@ -58,6 +63,7 @@ class SiteSettingController extends Controller
         }
 
         $this->handleLogoUpload($request);
+        $this->handleFaviconUpload($request);
 
         return redirect()
             ->route('admin.settings.edit')
@@ -88,6 +94,35 @@ class SiteSettingController extends Controller
 
             SiteSetting::query()->updateOrCreate(
                 ['key' => 'site_logo'],
+                ['value' => $path]
+            );
+        }
+    }
+
+    private function handleFaviconUpload(Request $request): void
+    {
+        $currentFavicon = SiteSetting::getValue('site_favicon');
+
+        if ($request->boolean('remove_site_favicon')) {
+            $this->deleteFileIfLocal($currentFavicon);
+
+            SiteSetting::query()->updateOrCreate(
+                ['key' => 'site_favicon'],
+                ['value' => null]
+            );
+
+            $currentFavicon = null;
+        }
+
+        if ($request->hasFile('site_favicon')) {
+            $this->deleteFileIfLocal($currentFavicon);
+
+            $path = $request
+                ->file('site_favicon')
+                ->store('site/favicon', 'public');
+
+            SiteSetting::query()->updateOrCreate(
+                ['key' => 'site_favicon'],
                 ['value' => $path]
             );
         }

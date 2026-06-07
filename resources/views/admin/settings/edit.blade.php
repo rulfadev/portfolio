@@ -20,6 +20,8 @@
         $seoKeywords = old('seo_keywords', $settings['seo_keywords'] ?? '');
         $siteLogo = old('site_logo', $settings['site_logo'] ?? null);
         $siteLogoUrl = $siteLogo ? asset('storage/' . $siteLogo) : null;
+        $siteFavicon = $settings['site_favicon'] ?? null;
+        $siteFaviconUrl = $siteFavicon ? asset('storage/' . $siteFavicon) : null;
     @endphp
 
     <div class="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -90,6 +92,42 @@
 
                             <p class="mt-2 text-xs leading-5 text-slate-500">
                                 Format: JPG, PNG, WEBP, SVG. Maksimal 2MB. Disarankan logo transparan.
+                            </p>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="mb-2 block text-sm font-bold text-slate-200">
+                                Favicon Website
+                            </label>
+
+                            @if ($siteFaviconUrl)
+                                <div
+                                    class="mb-4 flex items-center gap-4 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+                                    <div
+                                        class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-white">
+                                        <img src="{{ $siteFaviconUrl }}" alt="Favicon {{ $brandName }}"
+                                            class="h-full w-full object-contain p-2">
+                                    </div>
+
+                                    <div>
+                                        <p class="font-bold text-white">Favicon saat ini</p>
+                                        <p class="mt-1 text-sm text-slate-500">{{ $siteFavicon }}</p>
+
+                                        <label class="mt-3 flex items-center gap-3 text-sm text-slate-300">
+                                            <input type="checkbox" name="remove_site_favicon" value="1"
+                                                class="form-checkbox">
+                                            Hapus favicon saat update
+                                        </label>
+                                    </div>
+                                </div>
+                            @endif
+
+                            <input type="file" name="site_favicon"
+                                accept="image/x-icon,image/png,image/jpeg,image/webp,image/svg+xml" class="form-file">
+
+                            <p class="mt-2 text-xs leading-5 text-slate-500">
+                                Disarankan ukuran square 512x512 PNG, ICO, atau SVG. Jika kosong, sistem akan memakai logo
+                                website sebagai favicon.
                             </p>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 @extends('layouts.public', [
     'seoTitle' => 'Penilaian Client - ' . ($siteSettings['brand_name'] ?? 'RulfaDev'),
     'seoDescription' => 'Halaman penilaian project client.',
+    'robots' => 'noindex, nofollow',
 ])
 
 @section('content')
