@@ -8,6 +8,7 @@
     @php
         $settings = $siteSettings ?? [];
         $brandName = $settings['brand_name'] ?? 'RulfaDev';
+        $whatsapp = $settings['business_whatsapp'] ?? env('BUSINESS_WHATSAPP');
         $waText = urlencode('Halo ' . $brandName . ', saya ingin konsultasi pembuatan website.');
         $waUrl = $whatsapp ? 'https://wa.me/' . $whatsapp . '?text=' . $waText : route('contact');
 
