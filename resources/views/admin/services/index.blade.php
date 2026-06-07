@@ -114,8 +114,8 @@
                                         Edit
                                     </x-ui.action-button>
 
-                                    <x-ui.delete-form :action="route('admin.projects.destroy', $project)" title="Hapus project?"
-                                        text="Project ini akan dihapus dari portfolio dan tidak bisa dikembalikan." />
+                                    <x-ui.delete-form :action="route('admin.services.destroy', $service)" title="Hapus service?"
+                                        text="Service ini akan dihapus dari portfolio dan tidak bisa dikembalikan." />
                                 </div>
                             </td>
                         </tr>
