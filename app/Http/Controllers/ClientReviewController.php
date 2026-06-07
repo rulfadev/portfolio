@@ -34,17 +34,34 @@ class ClientReviewController extends Controller
 
         abort_unless($reviewLink->can_be_used, 403);
 
-        $validated = $request->validate([
-            'client_name' => ['required', 'string', 'max:255'],
-            'client_role' => ['nullable', 'string', 'max:255'],
-            'company' => ['nullable', 'string', 'max:255'],
+        $validated = $request->validate(
+            [
+                'client_name' => ['required', 'string', 'max:255'],
+                'client_role' => ['nullable', 'string', 'max:255'],
+                'company' => ['nullable', 'string', 'max:255'],
 
-            'rating' => ['required', 'integer', 'min:1', 'max:5'],
-            'message' => ['required', 'string', 'min:10', 'max:2000'],
-            'suggestions' => ['nullable', 'string', 'max:2000'],
+                'rating' => ['required', 'integer', 'min:1', 'max:5'],
+                'message' => ['required', 'string', 'min:10', 'max:2000'],
+                'suggestions' => ['nullable', 'string', 'max:2000'],
 
-            'consent_to_publish' => ['nullable', 'boolean'],
-        ]);
+                'consent_to_publish' => ['nullable', 'boolean'],
+            ],
+            [
+                'client_name.required' => 'Nama wajib diisi.',
+                'client_name.max' => 'Nama maksimal 255 karakter.',
+
+                'rating.required' => 'Rating wajib dipilih.',
+                'rating.integer' => 'Rating harus berupa angka.',
+                'rating.min' => 'Rating minimal 1 bintang.',
+                'rating.max' => 'Rating maksimal 5 bintang.',
+
+                'message.required' => 'Penilaian wajib diisi.',
+                'message.min' => 'Penilaian minimal 10 karakter.',
+                'message.max' => 'Penilaian maksimal 2000 karakter.',
+
+                'suggestions.max' => 'Saran maksimal 2000 karakter.',
+            ]
+        );
 
         $validated['client_review_link_id'] = $reviewLink->id;
         $validated['project_id'] = $reviewLink->project_id;

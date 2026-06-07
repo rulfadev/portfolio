@@ -84,11 +84,11 @@
                         </div>
 
                         <x-form.select name="rating" label="Rating" :selected="old('rating', $review->rating ?? 5)" :options="[
-                            '5' => '5 Bintang - Sangat Puas',
-                            '4' => '4 Bintang - Puas',
-                            '3' => '3 Bintang - Cukup',
-                            '2' => '2 Bintang - Kurang',
-                            '1' => '1 Bintang - Tidak Puas',
+                            ['value' => '5', 'label' => '5 Bintang - Sangat Puas'],
+                            ['value' => '4', 'label' => '4 Bintang - Puas'],
+                            ['value' => '3', 'label' => '3 Bintang - Cukup'],
+                            ['value' => '2', 'label' => '2 Bintang - Kurang'],
+                            ['value' => '1', 'label' => '1 Bintang - Tidak Puas'],
                         ]" required />
 
                         <x-form.textarea name="message" label="Penilaian / Testimonial" :value="old('message', $review->message ?? '')"

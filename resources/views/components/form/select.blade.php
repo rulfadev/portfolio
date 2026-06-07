@@ -12,8 +12,12 @@
 @php
     $id = $id ?? $name . '_' . \Illuminate\Support\Str::random(8);
 
-    $normalizedOptions = collect($options)
-        ->map(function ($label, $value) {
+    $rawOptions = is_array($options) ? $options : $options->toArray();
+
+    $isList = array_is_list($rawOptions);
+
+    $normalizedOptions = collect($rawOptions)
+        ->map(function ($label, $value) use ($isList) {
             if (is_array($label)) {
                 return [
                     'value' => (string) ($label['value'] ?? ''),
@@ -22,7 +26,7 @@
             }
 
             return [
-                'value' => is_int($value) ? (string) $label : (string) $value,
+                'value' => $isList ? (string) $label : (string) $value,
                 'label' => (string) $label,
             ];
         })
